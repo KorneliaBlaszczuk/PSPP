@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 18px;
+  color: #373737;
+  font-family: "Catamaran", sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.container-header {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1140px) {
+  .container {
+    max-width: auto;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .container-header {
+    max-width: auto;
+    width: 100%;
+    padding: 0 ;
+  }
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-weight: 100;
+  margin: 0 0 20px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 70px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+/* Header and menu*/
+.header {
+  max-height: 170px;
+  padding: 20px 20px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f5f3;
+}
+
+nav {
+  text-align: right;
+}
+
+.setlist {
+  margin-right: 50px;
+  margin-top: 35px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  padding: 10px 15px;
+  color: #f3f5f3;
+  background-color: #3f5c3f;
+  border-radius: 5%;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.5s ease-in;
+}
+
+.menu a:hover {
+  border-bottom: 3px solid #f3f5f3;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .menu li {
+    display: block;
+  }
+  .menu a {
+    display: inline-block;
+  }
+  .mobile-menu-icon {
+    display: inline-block;
+  }
+  .mobile-menu-icon:hover {
+    cursor: pointer;
+  }
+  .mobile-menu-icon.open i:before {
+    content: "\f00d";
+  }
+  .menu.opened {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    text-align: right;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100vh;
+  padding-left: 0;
+  position: relative;
+}
+
+.hero-logo {
+  color: whitesmoke; /*317x233*/
+  height: 105px;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  border-radius: 5%;
+}
+
+
+/* Columns */
+.columns-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.columns-2-container .column {
+  width: 45%;
+}
+
+.columns-3-container {
+  flex-wrap: wrap;
+  row-gap: 25px;
+}
+
+.columns-3-container .column {
+  width: 32%;
+}
+
+.columns-4-container .column {
+  text-align: center;
+  flex-basis: 25%;
+}
+
+@media screen and (max-width: 992px) {
+  .columns-3-container {
+    flex-direction: row;
+  }
+  .columns-3-container .column {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .columns-container {
+    flex-direction: column;
+  }
+  .columns-2-container .column,
+  .columns-3-container .column {
+    width: 100%;
+  }
+  .columns-4-container {
+    row-gap: 20px;
+  }
+}
+
+/* Sections */
+.section {
+  padding: 100px 0;
+}
+
+.section-violet {
+  background-color: #526652;
+  color: white;
+}
+
+.section-pink {
+  background-color: #ab9ca7;
+  color: black;
+}
+
+.section-title {
+  color: #526652;
+}
+
+
+
+
+.contact-section {
+  padding: 80px 0;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+
+.contact-section  {
+  background-color: #ffffff;
+}
+
+.contact-text {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.contact-author {
+  text-align: right;
+  font-size: 18px;
+  z-index: 2;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-text {
+    font-size: 30px;
+  }
+}
+
+
+
+/*Footer*/
+.footer {
+  padding: 40px 0;
+}
+
+.copyright,
+.social {
+  width: 49%;
+  display: inline-block;
+}
+
+.social {
+  text-align: right;
+}
+
+.social a {
+  color: #f3f5f3;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .social,
+  .copyright {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .social {
+    margin-top: 30px;
+  }
+}
